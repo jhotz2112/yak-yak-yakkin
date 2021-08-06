@@ -13,7 +13,10 @@ export default function NavBar(props) {
       <Link to="/home">Home</Link>
       &nbsp; | &nbsp;
       <Link to="/aboutpage">About</Link>
-      &nbsp;&nbsp;<Link onClick={handleLogOut} to="">Log Out</Link>
+      &nbsp; | &nbsp;
+      <Link to="/location">Locations</Link>
+      &nbsp; | &nbsp;
+      <Link onClick={handleLogOut} to="">Log Out</Link>
     </nav>
   );
 }
