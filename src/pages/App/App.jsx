@@ -6,6 +6,7 @@ import AuthPage from '../AuthPage/AuthPage';
 import HomePage from '../HomePage/HomePage';
 import AboutPage from '../AboutPage/AboutPage';
 import Location from '../Location/Location';
+import Profile from '../Profile/Profile';
 import NavBar from '../../components/NavBar/NavBar';
 
 export default function App() {
@@ -25,6 +26,9 @@ export default function App() {
             </Route>
             <Route path="/location">
               <Location />
+            </Route>
+            <Route path="/profile">
+              <Profile user={user} />
             </Route>
           </Switch>
             <Redirect to="/home" />

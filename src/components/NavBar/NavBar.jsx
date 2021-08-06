@@ -16,6 +16,8 @@ export default function NavBar(props) {
       &nbsp; | &nbsp;
       <Link to="/location">Locations</Link>
       &nbsp; | &nbsp;
+      <Link to="/profile">Profile</Link>
+      &nbsp; | &nbsp;
       <Link onClick={handleLogOut} to="">Log Out</Link>
     </nav>
   );
