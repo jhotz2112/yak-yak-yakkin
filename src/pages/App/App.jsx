@@ -18,9 +18,6 @@ export default function App() {
         <>
           <NavBar user={user} setUser={setUser} />
           <Switch>
-            <Route path="/home">
-              <HomePage user={user} setUser={setUser} />
-            </Route>
             <Route path="/aboutpage">
               <AboutPage />
             </Route>
@@ -31,7 +28,7 @@ export default function App() {
               <Profile user={user} />
             </Route>
           </Switch>
-            <Redirect to="/home" />
+            <Redirect to="/profile" />
         </>
         :
         <AuthPage setUser={setUser} />
