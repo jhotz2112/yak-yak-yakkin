@@ -1,9 +1,23 @@
+import { useState } from "react";
+import CreateLocation from '../../components/AddLocation/AddLocation'
+
 export default function Location() {
-    return (
+    const [showForm, setShowForm] = useState(false);
+
+    function pressNewLocation() {
+        setShowForm(true);
+    }
+
+    return ( showForm ? 
         <>
-            <h1>Location</h1>
+        <h1>New Location</h1>
+        <CreateLocation setShowForm={setShowForm} />
+        </>
+        :
+        <>
+            <button onClick={() => pressNewLocation()}>Create New Location</button>
             <h3>Google maps here</h3>
             <h3>Comments</h3>
         </>
-    )
+    );
 }
