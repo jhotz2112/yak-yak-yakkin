@@ -1,23 +1,30 @@
-import { useState } from "react";
-import CreateLocation from '../../components/AddLocation/AddLocation'
+import { useEffect, useState } from 'react'
+import * as locationsApi from '../../utilities/locations-api'
+import CreateLocationButton from '../../components/CreateLocationButton/CreateLocationButton'
+import LocationListTable from "../../components/LocationList/LocationList";
 
 export default function Location() {
     const [showForm, setShowForm] = useState(false);
+    const [locations, setLocations] = useState([]);
 
     function pressNewLocation() {
         setShowForm(true);
     }
 
-    return ( showForm ? 
+    useEffect(function() {
+        async function getLocations() {
+            const locations = await locationsApi.getAll();
+            setLocations(locations);
+            console.log(locations);
+        }
+        getLocations();
+    }, []);
+
+    return ( 
         <>
-        <h1>New Location</h1>
-        <CreateLocation setShowForm={setShowForm} />
-        </>
-        :
-        <>
-            <button onClick={() => pressNewLocation()}>Create New Location</button>
-            <h3>Google maps here</h3>
-            <h3>Comments</h3>
+        <h1>locations</h1>
+        <CreateLocationButton pressNewLocation={pressNewLocation} showForm={showForm} setShowForm={setShowForm} />
+        <LocationListTable locations={locations} />
         </>
     );
 }

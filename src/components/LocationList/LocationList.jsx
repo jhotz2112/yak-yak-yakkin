@@ -1,13 +1,11 @@
-import { useEffect, useState } from 'react'
-import * as locationsApi from '../../utilities/locations-api'
+import LocationTableItem from "../LocationTableItem/LocationTableItem"
 
-export default function LocationListTable() {
-    const [locations, setLocations] = useState([]);
-
-    useEffect(function() {
-        async function getLocations()
-            const locations = await locationsApi.getAll();
-            setLocations(locations);
-    }
-    getLocations();
-}, []);
+export default function LocationListTable({locations}) {
+    const tableItem = locations.map((l, idx) => <LocationTableItem idx={idx + 1} location={l} key={idx} />)
+    return(
+    <>
+        <h3>List Table</h3>
+        <div>{tableItem}</div>
+    </>
+    )
+}

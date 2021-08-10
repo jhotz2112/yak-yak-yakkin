@@ -17,14 +17,13 @@ const locationSchema = new Schema({
         type: String,
         required: true
     },
-    location: String,
     difficulty: {
         type: String,
         enum: ['Beginner', 'Intermediate', 'Expert'],
     },
-    image: String
+    image: String,
     // comments: [commentSchema],
-    // user: { type: Schema.Types.ObjectId, ref: 'User' },
+    user: { type: Schema.Types.ObjectId, ref: 'User' },
 }, {
     timestamps: true
 });

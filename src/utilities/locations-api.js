@@ -3,9 +3,9 @@ import sendRequest from './send-request';
 const BASE_URL = '/api/locations';
 
 // Retrieve an unpaid order for the logged in user
-// export function getAll() {
-//   return sendRequest(`${BASE_URL}/history`, POST);
-// }
+export function getAll() {
+  return sendRequest(`${BASE_URL}`);
+}
 
 
 export function AddLocation(locationData) {

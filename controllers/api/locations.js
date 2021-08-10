@@ -2,7 +2,7 @@ const Location = require('../../models/location');
 
 module.exports = {
     createLocation,
-    history,
+    index,
 };
 
 async function createLocation(req, res) {
@@ -14,8 +14,7 @@ async function createLocation(req, res) {
     res.json(location);
 }
 
-async function history(req, res) {
-    const location = await Location
-        .find({ user: req.user._id})
-        res.json(location)
+async function index(req, res) {
+    const locations = await Location.find({})
+    res.json(locations)
 }
