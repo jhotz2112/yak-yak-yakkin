@@ -21,7 +21,10 @@ const locationSchema = new Schema({
         type: String,
         enum: ['Beginner', 'Intermediate', 'Expert'],
     },
-    image: String,
+    description: {
+        type: String,
+        required: true
+    },
     // comments: [commentSchema],
     user: { type: Schema.Types.ObjectId, ref: 'User' },
 }, {

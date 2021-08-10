@@ -4,8 +4,8 @@
   --tan-1: #FBF9F6;
   --tan-2: #E7E2DD;
   --tan-3: #E2D9D1;
-  --tan-4: #b9d3ae;
-  --orange: #75a45e;
+  --tan-4: #6f9161;
+  --orange: #557744;
   --text-light: #968c84;
   --text-dark: #5f6154;
 }
@@ -80,10 +80,10 @@ code {
   font-size: 2vmin;
 }
 
-.form-container {
+.form-container, .LocationListTable {
   padding: 3vmin;
-  background-color: var(--tan-1);
-  border: .1vmin solid var(--tan-3);
+  background-color: rgb(104, 104, 154);
+  border: .1vmin solid rgb(23, 23, 29);
   border-radius: 1vmin;
 }
 
@@ -98,6 +98,7 @@ form {
   gap: 1.25vmin;
   color: var(--text-light);
 }
+
 
 label {
   font-size: 2vmin;

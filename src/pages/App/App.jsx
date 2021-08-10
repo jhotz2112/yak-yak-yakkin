@@ -7,6 +7,8 @@ import AboutPage from '../AboutPage/AboutPage';
 import Location from '../Location/Location';
 import Profile from '../Profile/Profile';
 import NavBar from '../../components/NavBar/NavBar';
+import LocationDetail from '../LocationDetail/LocationDetail';
+
 
 export default function App() {
   const [user, setUser] = useState(getUser());
@@ -20,14 +22,17 @@ export default function App() {
             <Route path="/aboutpage">
               <AboutPage />
             </Route>
+            <Route path="/details/:id">
+              <LocationDetail />
+            </Route>
             <Route path="/location">
               <Location />
             </Route>
             <Route path="/profile">
               <Profile user={user} />
             </Route>
-          </Switch>
             <Redirect to="/profile" />
+          </Switch>
         </>
         :
         <AuthPage setUser={setUser} />

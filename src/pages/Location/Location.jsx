@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react'
 import * as locationsApi from '../../utilities/locations-api'
 import CreateLocationButton from '../../components/CreateLocationButton/CreateLocationButton'
-import LocationListTable from "../../components/LocationList/LocationList";
+import LocationListTable from "../../components/LocationListTable/LocationListTable";
 
 export default function Location() {
     const [showForm, setShowForm] = useState(false);
     const [locations, setLocations] = useState([]);
+    const [selected, setSelected] = useState(0)
 
     function pressNewLocation() {
         setShowForm(true);
@@ -20,11 +21,20 @@ export default function Location() {
         getLocations();
     }, []);
 
+    function changeSelected(idx) {
+        if(idx !== selected) {
+            setSelected(idx)
+        } else {
+            setSelected(-1)
+        }
+    }
+
     return ( 
         <>
-        <h1>locations</h1>
-        <CreateLocationButton pressNewLocation={pressNewLocation} showForm={showForm} setShowForm={setShowForm} />
-        <LocationListTable locations={locations} />
+        <h1>
+            Locations</h1>
+        <CreateLocationButton pressNewLocation={pressNewLocation} showForm={showForm} setShowForm={setShowForm} setLocations={setLocations} locations={locations} />
+        <LocationListTable selected={selected} setSelected={changeSelected} locations={locations} />
         </>
     );
 }

@@ -1,0 +1,29 @@
+.locationContainer {
+    display: flex;
+    padding-top: 5vmin;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 40vmin;
+}
+
+.LocationDetailName {
+    color: black;
+    padding: 1vmin;
+    gap: 1.25vmin;
+    color: var(--text-light);
+    background-color: rgb(186, 186, 211);
+    border: .1vmin solid rgb(23, 23, 29);
+    border-radius: 1vmin;
+  }
+
+  .LocationItem, .LocationDetail {
+    align-items: center;
+    background-color: var(--tan-1);
+    color: black;
+    border: .1vmin solid var(--tan-3);
+    border-radius: 1vmin;
+    padding: .6vmin;
+    text-align: center;
+    font-size: 2vmin;
+  }
+  

@@ -1,10 +1,10 @@
 import CreateLocation from '../CreateLocation/CreateLocation'
 
-export default function CreateLocationButton({showForm, setShowForm, pressNewLocation}) {
+export default function CreateLocationButton({showForm, setShowForm, pressNewLocation, locations, setLocations}) {
     return (
         showForm ? 
         <>
-        <CreateLocation setShowForm={setShowForm} />
+        <CreateLocation setShowForm={setShowForm} setLocations={setLocations} locations={locations} />
         </>
         :
         <>
