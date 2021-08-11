@@ -13,8 +13,8 @@ const commentSchema = new Schema({
 });
 
 const photoSchema = new Schema({
-    content: { type: String, required: true },
-    url: String
+    content: String,
+    url: { type: String, required: true }
 }, {
     timestamps: true
 });

@@ -1,9 +1,9 @@
 .locationContainer {
-    display: flex;
     padding-top: 5vmin;
     flex-direction: column;
     flex-wrap: wrap;
     width: 40vmin;
+    
 }
 
 .LocationDetailName {
