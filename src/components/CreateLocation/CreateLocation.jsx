@@ -1,41 +1,38 @@
 import { useState, useRef, useEffect } from 'react';
-import { AddLocation } from '../../utilities/locations-api';
-import * as photosAPI from '../../utilities/photos-api';
+import { addLocation } from '../../utilities/locations-api';
 import PhotoCard from '../../components/PhotoCard/PhotoCard';
 
-export default function CreateLocation({ setShowForm, locations, setLocations }) {
-  const [formData, setFormData] = useState({
-    locationName: '',
-    location: '',
-    difficulty: '',
-    image: ''
-  });
+const initialFormData = {
+  locationName: '',
+  description: '',
+  difficulty: 'Expert',
+  content: ''
+};
 
-  const [title, setTitle] = useState('');
-  const [photos, setPhotos] = useState([]);
+export default function CreateLocation({ setShowForm, locations, setLocations }) {
+  const [formData, setFormData] = useState(initialFormData);
+
   // Use a ref prop on the <input> in the JSX to
   // create a reference to the <input>, i.e.,
   // inputRef.current will be the <input> DOM element
   const fileInputRef = useRef();
 
-  // Fetch existing uploaded photos after first render
-  // Photos will be sorted in the controller with the most recent first
-  useEffect(function() {
-    photosAPI.getAll().then(photos => setPhotos(photos));
-  }, []);
-
   /*--- Event Handlers ---*/
 
-  async function handleUpload() {
+  async function handleSubmit(evt) {
+    evt.preventDefault();
     // Use FormData object to send the inputs in the fetch request
     // https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch#uploading_a_file
-    const formData = new FormData();
-    formData.append('title', title);
-    formData.append('photo', fileInputRef.current.files[0]);
-    const newPhoto = await photosAPI.upload(formData);
-    setPhotos([newPhoto, ...photos]);
+    const formObj = new FormData();
+    formObj.append('photo', fileInputRef.current.files[0]);
+    formObj.append('locationName', formData.locationName);
+    formObj.append('description', formData.description);
+    formObj.append('difficulty', formData.difficulty);
+    formObj.append('content', formData.content);
+    const newLocation = await addLocation(formObj);
+    setLocations([newLocation, ...locations]);
     // Clear the description and file inputs
-    setTitle('');
+    setFormData(initialFormData);
     fileInputRef.current.value = '';
   }
 
@@ -46,18 +43,6 @@ export default function CreateLocation({ setShowForm, locations, setLocations })
     });
   };
 
-  async function handleSubmit(evt) {
-    evt.preventDefault();
-    try {
-      const formInfo = { ...formData };
-      const newLocation = await AddLocation(formInfo);
-      setShowForm(false);
-      setLocations([...locations, newLocation])
-    } catch {
-      setFormData({ ...formData, error: 'Add Location Failed - Try Again' });
-    }
-  };
-
   return (
     <div className="form-container">
       <form autoComplete="off" onSubmit={handleSubmit}>
@@ -66,18 +51,14 @@ export default function CreateLocation({ setShowForm, locations, setLocations })
         <label>Description</label>
         <input type="text" name="description" value={formData.description} onChange={handleChange} required />
         <label>Difficulty</label>
-        <select name='difficulty' onChange={handleChange}>
+        <select name='difficulty' value={formData.difficulty} onChange={handleChange}>
           <option value='Beginner'>Beginner</option>
           <option value='Intermediate'>Intermediate</option>
-          <option value='Expert' selected>Expert</option>
+          <option value='Expert'>Expert</option>
         </select>
         <section className="flex-ctr-ctr">
           <input type="file" ref={fileInputRef} />
-          <input value={title} onChange={(evt) => setTitle(evt.target.value)} placeholder="Photo Title" />
-          <button onClick={handleUpload}>Upload Photo</button>
-        </section>
-        <section>
-          {photos.map(p => <PhotoCard photo={p} key={p._id} />)}
+          <input name="content" value={formData.content} onChange={handleChange} placeholder="Photo Title" />
         </section>
         <button type="submit">Submit</button>
       </form>

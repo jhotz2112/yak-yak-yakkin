@@ -8,8 +8,8 @@ export function getAll() {
 }
 
 
-export function AddLocation(locationData) {
-  return sendRequest(`${BASE_URL}/create`, 'POST', locationData);
+export function addLocation(locationData) {
+  return sendRequest(`${BASE_URL}/create`, 'POST', locationData, true);
 }
 
 export function getOne(id) {

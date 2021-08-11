@@ -12,6 +12,13 @@ const commentSchema = new Schema({
     timestamps: true
 });
 
+const photoSchema = new Schema({
+    content: { type: String, required: true },
+    url: String
+}, {
+    timestamps: true
+});
+
 const locationSchema = new Schema({
     locationName: {
         type: String,
@@ -25,6 +32,7 @@ const locationSchema = new Schema({
         type: String,
         required: true
     },
+    photos: [photoSchema],
     // comments: [commentSchema],
     user: { type: Schema.Types.ObjectId, ref: 'User' },
 }, {
