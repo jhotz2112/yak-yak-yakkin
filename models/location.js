@@ -33,7 +33,7 @@ const locationSchema = new Schema({
         required: true
     },
     photos: [photoSchema],
-    // comments: [commentSchema],
+    comments: [commentSchema],
     user: { type: Schema.Types.ObjectId, ref: 'User' },
 }, {
     timestamps: true

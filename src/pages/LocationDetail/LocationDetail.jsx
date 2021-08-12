@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import LocationComments from "../LocationComments/LocationComments";
 import * as locationsApi from "../../utilities/locations-api"
 import "./LocationDetail.css"
 
@@ -36,6 +37,7 @@ export default function LocationDetail() {
                     {thisLocation.detail}
                 </div>
             </div>
+            <LocationComments />
         </div>
     )
 }
