@@ -1,15 +1,17 @@
 import { useEffect, useState } from 'react'
 import * as locationsApi from '../../utilities/locations-api'
-import CreateLocationButton from '../../components/CreateLocationButton/CreateLocationButton'
 import LocationListTable from "../../components/LocationListTable/LocationListTable";
+import LocationCrudButtons from '../../components/LocationCrudButtons/LocationCrudButtons';
 
 export default function Location() {
-    const [showForm, setShowForm] = useState(false);
+    const [showCreateForm, setShowCreateForm] = useState(false);
+    const [showDeleteForm, setShowDeleteForm] = useState(false);
+    const [showUpdateForm, setShowUpdateForm] = useState(false);
     const [locations, setLocations] = useState([]);
-    const [selected, setSelected] = useState(0)
+    const [selected, setSelected] = useState()
 
     function pressNewLocation() {
-        setShowForm(true);
+        setShowCreateForm(true);
     }
 
     useEffect(function() {
@@ -21,19 +23,21 @@ export default function Location() {
         getLocations();
     }, []);
 
-    function changeSelected(idx) {
-        if(idx !== selected) {
-            setSelected(idx)
+    function changeSelected(id) {
+        if(id !== selected) {
+            setSelected(id)
         } else {
-            setSelected(-1)
+            setSelected()
         }
     }
 
     return ( 
         <>
-        <h1>
-            Locations</h1>
-        <CreateLocationButton pressNewLocation={pressNewLocation} showForm={showForm} setShowForm={setShowForm} setLocations={setLocations} locations={locations} />
+        <h1>Locations</h1>
+        <LocationCrudButtons pressNewLocation={pressNewLocation} showCreateForm={showCreateForm}
+            setShowCreateForm={setShowCreateForm} showDeleteForm={showDeleteForm} setShowDeleteForm={setShowDeleteForm}
+            showUpdateForm={showUpdateForm} setShowUpdateForm={setShowUpdateForm}
+            setLocations={setLocations} locations={locations} selected={selected} />
         <LocationListTable selected={selected} setSelected={changeSelected} locations={locations} />
         </>
     );

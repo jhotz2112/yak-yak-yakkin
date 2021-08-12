@@ -12,7 +12,16 @@ export function addLocation(locationData) {
   return sendRequest(`${BASE_URL}/create`, 'POST', locationData, true);
 }
 
+export async function updateLocation(locationData, id) {
+  return sendRequest(`${BASE_URL}/${id}`, 'PUT', locationData)
+}
+
 export function getOne(id) {
     return sendRequest(`${BASE_URL}/${id}`);
 }
+
+export async function deleteOne(id) {
+  return sendRequest(`${BASE_URL}/${id}`, 'DELETE')
+}
+
 

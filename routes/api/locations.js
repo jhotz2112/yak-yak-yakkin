@@ -6,5 +6,7 @@ const locationsCtrl = require('../../controllers/api/locations');
 router.post('/create', upload.single('photo'), locationsCtrl.createLocation);
 router.get('/', locationsCtrl.index);
 router.get('/:id', locationsCtrl.detail);
+router.delete('/:id', locationsCtrl.deleteOne);
+router.put('/:id', locationsCtrl.updateOne);
 
 module.exports = router;

@@ -17,7 +17,14 @@ export default function LocationDetail() {
     }, []);
 
     return (
-        <div className="locationContainer">
+        <div className="LocationContainer"
+        style={
+            {border:" 3px solid black",
+            backgroundColor: "#FBF9F6",
+            background: `url(${thisLocation.photos && thisLocation.photos[0].url}) no-repeat center`,
+            backgroundSize: "50vmin 50vmin"}
+        }
+        >
             <div className="LocationDetail">
                <div className="LocationDetailName">
                     {thisLocation.locationName}
@@ -26,6 +33,7 @@ export default function LocationDetail() {
                 <br></br>
                 <div className="LocationDetailDescription">
                     {thisLocation.description}
+                    {thisLocation.detail}
                 </div>
             </div>
         </div>

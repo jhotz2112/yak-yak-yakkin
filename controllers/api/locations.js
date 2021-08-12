@@ -4,7 +4,9 @@ const Location = require('../../models/location');
 module.exports = {
     createLocation,
     index,
-    detail
+    detail,
+    deleteOne,
+    updateOne
 };
 
 async function createLocation(req, res) {
@@ -26,9 +28,17 @@ async function createLocation(req, res) {
 
 async function index(req, res) {
     const locations = await Location.find({}).sort('-createdAt').exec();
-    res.json(locations)
+    res.json(locations);
 }
 async function detail(req, res) {
     const location = await Location.findById(req.params.id);
-    res.json(location)
+    res.json(location);
+}
+async function deleteOne(req, res) {
+    const location = await Location.findOneAndDelete( {_id: req.params.id} );
+    res.json("Location Deleted");
+}
+async function updateOne(req, res) {
+    const location = await Location.findOneAndUpdate( {_id: req.params.id}, req.body, {new:true} );
+    res.json(location);
 }
