@@ -7,8 +7,8 @@ import "./LocationDetail.css"
 export default function LocationDetail() {
     let { id } = useParams();
     const [thisLocation, setThisLocation] = useState({})
-   
-    useEffect(function() {
+
+    useEffect(function () {
         async function getLocal() {
             const location = await locationsApi.getOne(id);
             console.log(location)
@@ -18,17 +18,18 @@ export default function LocationDetail() {
     }, []);
 
     return (
-        <div className="LocationContainer"
-        style={
-            {border:" 3px solid black",
-            backgroundColor: "#FBF9F6",
-            background: `url(${thisLocation.photos && thisLocation.photos[0].url}) no-repeat center`,
-            backgroundSize: "50vmin 50vmin"}
-        }
-        >
+        <div className="LocationContainer">
+            {thisLocation.locationName}
+            <div className="DetailsPic" style={
+                {
+                    background: `url(${thisLocation.photos && thisLocation.photos[0].url}) no-repeat center`,
+                    backgroundSize: "40vmin 60vmin"
+                }
+            }
+            >
+            </div>
             <div className="LocationDetail">
-               <div className="LocationDetailName">
-                    {thisLocation.locationName}
+                <div className="LocationDetailName">
                 </div>
                 <br></br>
                 <br></br>
@@ -36,8 +37,8 @@ export default function LocationDetail() {
                     {thisLocation.description}
                     {thisLocation.detail}
                 </div>
+                <LocationComments setThisLocation={setThisLocation} thisLocation={thisLocation} />
             </div>
-            <LocationComments />
         </div>
     )
 }

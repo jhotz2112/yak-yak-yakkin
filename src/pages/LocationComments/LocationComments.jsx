@@ -1,5 +1,14 @@
-export default function LocationComments() {
+import CommentCreate from "../../components/CommentCreate/CommentCreate";
+
+export default function LocationComments({setThisLocation, thisLocation}) {
     return (
-        <h1>comments</h1>
+        <div>
+            <CommentCreate setThisLocation={setThisLocation} thisLocation={thisLocation} />
+            {
+                thisLocation.comments && thisLocation.comments.map((c) => (
+                    <li>{c.content}</li>
+                ))
+            }
+        </div>
     )
 }

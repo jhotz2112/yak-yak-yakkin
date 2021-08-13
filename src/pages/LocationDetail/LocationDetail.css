@@ -1,27 +1,5 @@
-.LocationContainer {
-  height: 50vmin;
-  width: 50vmin;
-  border-radius: 1vmin;
-  align-content: center;
+.DetailsPic {
+  height: 40vmin;
+  width:40vmin;
+  border-radius: 2%;
 }
-
-.LocationDetailName {
-    color: white;
-    padding: 1vmin;
-    width: fit-content;
-    gap: 1.25vmin;
-    background-color: rgb(97, 97, 123);
-    border: .1vmin solid rgb(23, 23, 29);
-    border-radius: 1vmin;
-    align-content: center;
-  }
-
-  .LocationItem, .LocationDetail {
-    align-items: center;
-    color: black;
-    border-radius: 1vmin;
-    padding: .6vmin;
-    text-align: center;
-    font-size: 2vmin;
-  }
-  

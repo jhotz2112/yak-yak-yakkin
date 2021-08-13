@@ -3,10 +3,6 @@ const Schema = mongoose.Schema;
 
 const commentSchema = new Schema({
     content: { type: String, required: true },
-    userDifficulty: {
-        type: String,
-        enum: ['Beginner', 'Intermediate', 'Expert'],
-    },
     user: { type: Schema.Types.ObjectId, ref: 'User' },
 }, {
     timestamps: true
