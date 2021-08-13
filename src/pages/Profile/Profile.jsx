@@ -9,7 +9,6 @@ export default function Profile(props) {
             <br />
             <div class="avatar">Profile Pic Here</div>
             <br />
-            <h2>Hopefully messaging capapbility here</h2>
             <br />
             <br />
             <br />

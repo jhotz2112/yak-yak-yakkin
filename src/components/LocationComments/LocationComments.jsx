@@ -1,4 +1,5 @@
-import CommentCreate from "../../components/CommentCreate/CommentCreate";
+import CommentCreate from "../CommentCreate/CommentCreate";
+import CommentDelete from "../CommentDelete/CommentDelete";
 
 export default function LocationComments({setThisLocation, thisLocation}) {
     return (
@@ -6,7 +7,10 @@ export default function LocationComments({setThisLocation, thisLocation}) {
             <CommentCreate setThisLocation={setThisLocation} thisLocation={thisLocation} />
             {
                 thisLocation.comments && thisLocation.comments.map((c) => (
-                    <li>{c.content}</li>
+                    <li>
+                        {c.content}
+                        <CommentDelete commentId={c._id} setThisLocation={setThisLocation} thisLocation={thisLocation} />
+                    </li>
                 ))
             }
         </div>

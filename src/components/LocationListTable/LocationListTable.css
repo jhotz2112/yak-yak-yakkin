@@ -1,0 +1,6 @@
+.LocationListTable {
+    padding: 3vmin;
+    background-color: rgb(104, 104, 154);
+    border: .1vmin solid rgb(23, 23, 29);
+    border-radius: 1vmin;
+  }

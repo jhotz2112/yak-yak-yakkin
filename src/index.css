@@ -7,7 +7,7 @@
   --tan-4: #6f9161;
   --orange: #346d79;
   --text-light: #968c84;
-  --text-dark: #54615f;
+  --text-dark: #252b2a;
 }
 
 *, *:before, *:after {
@@ -80,7 +80,7 @@ code {
   font-size: 2vmin;
 }
 
-.form-container, .LocationListTable {
+.form-container {
   padding: 3vmin;
   background-color: rgb(104, 104, 154);
   border: .1vmin solid rgb(23, 23, 29);
@@ -93,12 +93,14 @@ p.error-message {
 }
 
 form {
+  background-color: #e3dfdb;
+  border: .1vmin solid rgb(23, 23, 29);
+  border-radius: .5vmin;
   display: grid;
   grid-template-columns: 1fr 3fr;
   gap: 1.25vmin;
-  color: var(--text-light);
+  color: var(--text-dark);
 }
-
 
 label {
   font-size: 2vmin;
