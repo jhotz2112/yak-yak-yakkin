@@ -20,28 +20,18 @@ export default function LocationDetail() {
     return (
         <main>
             <div className="LocationContainer">
-                {thisLocation.locationName}
-                <div className="DetailsPic" style={
-                    {
-                        "background": `url(${thisLocation.photos && thisLocation.photos[0].url}) no-repeat`, "backgroundSize": "contain"
-                    }
-                }
-                >
+                <div>
+                    <img src={thisLocation.photos && thisLocation.photos[0].url} className="DetailsPic"></img>
                 </div>
                 <div className="LocationDetail">
                     <div className="LocationDetailName">
+                        {thisLocation.locationName}
                     </div>
-                    <br></br>
-                    <br></br>
                     <div className="LocationDetailDescription">
                         {thisLocation.description}
-                        <br></br>
-                        <br></br>
                         {thisLocation.difficulty}
                     </div>
                 </div>
-            </div>
-            <div className="sidebar">
                 <LocationComments setThisLocation={setThisLocation} thisLocation={thisLocation} />
             </div>
         </main>

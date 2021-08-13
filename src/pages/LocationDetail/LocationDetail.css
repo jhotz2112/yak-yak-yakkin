@@ -1,17 +1,19 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
 .LocationContainer {
-  display: flex;
-  flex: 9;
+  display: grid;
+  grid-template-columns: repeat(3, 30vw);
+  gap: 1vmin;
 }
 
 .DetailsPic {
-  flex: 3;
-  height: 40vmin;
-  width:40vmin;
+  width: 30vw;
   border-radius: 2%;
 }
 
 .sidebar {
-  flex: 3;
   height: fit-content;
   margin: 20px;
   padding-bottom: 30px;
@@ -23,7 +25,6 @@
 }
 
 .LocationDetailDescription {
-  flex: 3;
   height: fit-content;
   margin: 20px;
   padding-bottom: 30px;

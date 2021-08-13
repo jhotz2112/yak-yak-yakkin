@@ -16,8 +16,8 @@ async function create(req, res) {
 }
 
 async function deleteComment(req, res) {
-    const location = await Location.findOne( {_id: req.params.l_id} );
-    location.comments.remove(req.params.c_id);
+    const location = await Location.findOne( {"comments._id":req.params.id} );
+    location.comments.remove(req.params.id);
     await location.save();
     res.json(location);
 }
