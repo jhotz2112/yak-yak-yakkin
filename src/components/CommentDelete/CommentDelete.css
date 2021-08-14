@@ -1,11 +1,13 @@
 .DeleteButton {
-  height: 2vmin;
-  width: 2vmin;
+  height: 3vmin;
+  width: 3vmin;
   align-content: center;
 }
 
-.button {
+.Delete {
   height: 1vmin;
   width: 1vmin;
   align-content: center;
+  text-align: center;
+  font-size: small;
 }
