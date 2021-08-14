@@ -1,4 +1,7 @@
 .CommentBox {
     background-color: thistle;
-    width:fit-content;
+    width: 30vw;
+    border: .1vmin solid rgb(23, 23, 29);
+    border-radius: .5vmin;
+    gap: 1vmin;
 }

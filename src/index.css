@@ -94,6 +94,7 @@ p.error-message {
 
 form {
   background-color: #e3dfdb;
+  padding: 1vmin;
   border: .1vmin solid rgb(23, 23, 29);
   border-radius: .5vmin;
   display: grid;
@@ -101,12 +102,27 @@ form {
   gap: 1.25vmin;
   color: var(--text-dark);
 }
+
 .form {
   background-color: #e3dfdb;
   align-items: center;
   border: .1vmin solid rgb(23, 23, 29);
   border-radius: .5vmin;
   color: var(--text-dark);
+}
+
+nav {
+  background-color: #6aaed8;
+  opacity: 0.8;
+  padding: 1vmin;
+  align-items: center;
+  border-radius: .5vmin;
+  color: var(--text-dark);
+  gap: 1.25vmin;
+}
+
+link {
+  color:forestgreen
 }
 
 label {

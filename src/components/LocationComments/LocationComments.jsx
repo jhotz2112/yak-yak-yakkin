@@ -8,8 +8,8 @@ export default function LocationComments({ setThisLocation, thisLocation }) {
             {
                 thisLocation.comments && thisLocation.comments.map((c) => (
                     <div className="CommentBox">
+                        <p>{c.content}</p>
                         <CommentDelete commentId={c._id} setThisLocation={setThisLocation} thisLocation={thisLocation} />
-                        {c.content}
                     </div>
                 ))
             }

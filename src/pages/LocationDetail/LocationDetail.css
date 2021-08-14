@@ -16,6 +16,7 @@
 .DetailsPic {
   width: 30vw;
   border-radius: 2%;
+  border: .1vmin solid rgb(23, 23, 29);
 }
 
 .sidebar {
@@ -27,6 +28,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  border: .1vmin solid rgb(23, 23, 29);
 }
 
 .LocationDetailDescription {
@@ -38,7 +40,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  border: .1vmin solid rgb(23, 23, 29);
 }
+
 .LocationDetailName {
   height: 5vmin;
   margin: 20px;
@@ -48,6 +52,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  border: .1vmin solid rgb(23, 23, 29);
 }
 
 p {

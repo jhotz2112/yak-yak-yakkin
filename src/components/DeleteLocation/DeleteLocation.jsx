@@ -15,7 +15,7 @@ export default function DeleteLocation({ id, setShowDeleteForm, setLocations, lo
       <form autoComplete="off" onSubmit={handleDelete}>
         <label>Are you sure you want to DELETE?</label>
         <button type="submit">Delete</button>
-        <button onClick={() => setShowDeleteForm(false)}>cancel</button>
+        <button onClick={() => setShowDeleteForm(false)}>Cancel</button>
       </form>
     </div>
   );
