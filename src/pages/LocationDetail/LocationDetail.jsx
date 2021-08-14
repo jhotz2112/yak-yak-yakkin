@@ -29,7 +29,13 @@ export default function LocationDetail() {
                     </div>
                     <div className="LocationDetailDescription">
                         {thisLocation.description}
-                        {thisLocation.difficulty}
+                        <br></br>
+                        <br></br>
+                        <br></br>
+                        <p>
+                        <p><u>Difficulty:</u></p>
+                            {thisLocation.difficulty}
+                        </p>
                     </div>
                 </div>
                 <LocationComments setThisLocation={setThisLocation} thisLocation={thisLocation} />

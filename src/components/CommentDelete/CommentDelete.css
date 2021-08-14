@@ -1,0 +1,11 @@
+.DeleteButton {
+  height: 2vmin;
+  width: 2vmin;
+  align-content: center;
+}
+
+.button {
+  height: 1vmin;
+  width: 1vmin;
+  align-content: center;
+}

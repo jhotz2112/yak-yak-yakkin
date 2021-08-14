@@ -1,5 +1,5 @@
 import * as commentsApi from '../../utilities/comments-api';
-
+import "./CommentDelete.css"
 export default function CommentDelete({setThisLocation, commentId}) {
 
   async function handleDelete(evt) {
@@ -9,8 +9,8 @@ export default function CommentDelete({setThisLocation, commentId}) {
   }
 
     return(
-      <form autoComplete="off" onSubmit={handleDelete}>
-        <button type="submit">X</button>
+      <form className="DeleteButton" autoComplete="off" onSubmit={handleDelete}>
+        <button className="button" onSubmit={handleDelete} type="submit">X</button>
         </form>
     )
 }
