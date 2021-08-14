@@ -2,7 +2,7 @@ import CommentCreate from "../CommentCreate/CommentCreate";
 import CommentDelete from "../CommentDelete/CommentDelete";
 import "./LocationComments.css"
 
-export default function LocationComments({setThisLocation, thisLocation}) {
+export default function LocationComments({ setThisLocation, thisLocation }) {
     return (
         <div>
             {

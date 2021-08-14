@@ -1,4 +1,3 @@
-import * as locationsApi from '../../utilities/locations-api';
 import { useState, useRef, useEffect } from 'react';
 import { updateLocation } from '../../utilities/locations-api';
 
@@ -8,7 +7,7 @@ const initialFormData = {
   difficulty: 'Expert'
 };
 
-export default function UpdateLocation({id, setShowUpdateForm, setLocations, locations}) {
+export default function UpdateLocation({ id, setShowUpdateForm, setLocations, locations }) {
   const [formData, setFormData] = useState(initialFormData);
 
   async function handleUpdate(evt) {

@@ -14,7 +14,7 @@ export default function Location() {
         setShowCreateForm(true);
     }
 
-    useEffect(function() {
+    useEffect(function () {
         async function getLocations() {
             const locations = await locationsApi.getAll();
             setLocations(locations);
@@ -24,21 +24,21 @@ export default function Location() {
     }, []);
 
     function changeSelected(id) {
-        if(id !== selected) {
+        if (id !== selected) {
             setSelected(id)
         } else {
             setSelected()
         }
     }
 
-    return ( 
+    return (
         <>
-        <h1>Locations</h1>
-        <LocationCrudButtons pressNewLocation={pressNewLocation} showCreateForm={showCreateForm}
-            setShowCreateForm={setShowCreateForm} showDeleteForm={showDeleteForm} setShowDeleteForm={setShowDeleteForm}
-            showUpdateForm={showUpdateForm} setShowUpdateForm={setShowUpdateForm}
-            setLocations={setLocations} locations={locations} selected={selected} />
-        <LocationListTable selected={selected} setSelected={changeSelected} locations={locations} />
+            <h1>Locations</h1>
+            <LocationCrudButtons pressNewLocation={pressNewLocation} showCreateForm={showCreateForm}
+                setShowCreateForm={setShowCreateForm} showDeleteForm={showDeleteForm} setShowDeleteForm={setShowDeleteForm}
+                showUpdateForm={showUpdateForm} setShowUpdateForm={setShowUpdateForm}
+                setLocations={setLocations} locations={locations} selected={selected} />
+            <LocationListTable selected={selected} setSelected={changeSelected} locations={locations} />
         </>
     );
 }

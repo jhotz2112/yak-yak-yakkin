@@ -25,7 +25,7 @@ export default class SignUpForm extends Component {
     try {
       // We don't want to send the 'error' or the 
       // 'confirm state properties
-      const formData = {...this.state};
+      const formData = { ...this.state };
       delete formData.error;
       delete formData.confirm;
       // The promise returned by the signUp service methods
@@ -36,7 +36,7 @@ export default class SignUpForm extends Component {
       this.props.setUser(user);
     } catch {
       // An error occurred
-      this.setState({ error: 'Sign Up Failed - Try Again'});
+      this.setState({ error: 'Sign Up Failed - Try Again' });
     }
   };
 

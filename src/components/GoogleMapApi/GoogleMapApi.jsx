@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 export default function GoogleMapApi() {
 
-
     return (
         <script>
 
@@ -13,7 +12,7 @@ export default function GoogleMapApi() {
             let geoResults, validAddress;
                 fetch(geoUrl).then(res => res.json())
                     .then(data => {
-                    validAddress = data.status === "OK";
+                validAddress = data.status === "OK";
             if (validAddress) geoResults = data.results[0];
             if (validAddress) {
                 let location = geoResults.geometry.location;
@@ -22,7 +21,7 @@ export default function GoogleMapApi() {
             document.getElementById("map"),
             {
                 center: location,
-                zoom: 12,
+            zoom: 12,
             }
             );
             const marker = new google.maps.Marker({
@@ -33,5 +32,5 @@ export default function GoogleMapApi() {
     })
         </script>
     )
-s
+    s
 }

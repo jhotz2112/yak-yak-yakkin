@@ -3,7 +3,6 @@ import { useParams } from "react-router-dom";
 import LocationComments from "../../components/LocationComments/LocationComments";
 import * as locationsApi from "../../utilities/locations-api"
 import "./LocationDetail.css"
-import CommentDelete from "../../components/CommentDelete/CommentDelete";
 
 export default function LocationDetail() {
     let { id } = useParams();
@@ -25,7 +24,7 @@ export default function LocationDetail() {
                 </div>
                 <div className="LocationDetail">
                     <div className="LocationDetailName">
-                        {thisLocation.locationName}
+                        <p>{thisLocation.locationName}</p>
                     </div>
                     <div className="LocationDetailDescription">
                         {thisLocation.description}
@@ -33,7 +32,7 @@ export default function LocationDetail() {
                         <br></br>
                         <br></br>
                         <p>
-                        <p><u>Difficulty:</u></p>
+                            <p><u>Difficulty:</u></p>
                             {thisLocation.difficulty}
                         </p>
                     </div>

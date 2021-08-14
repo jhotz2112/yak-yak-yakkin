@@ -7,4 +7,4 @@ export default function PhotoCard({ photo }) {
       <div>{photo.title}</div>
     </article>
   );
-} 
+}

@@ -9,13 +9,12 @@ import Profile from '../Profile/Profile';
 import NavBar from '../../components/NavBar/NavBar';
 import LocationDetail from '../LocationDetail/LocationDetail';
 
-
 export default function App() {
   const [user, setUser] = useState(getUser());
 
   return (
     <main className="App">
-      { user ?
+      {user ?
         <>
           <NavBar user={user} setUser={setUser} />
           <Switch>

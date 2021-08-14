@@ -16,7 +16,7 @@ export async function updateLocation(locationData, id) {
 }
 
 export function getOne(id) {
-    return sendRequest(`${BASE_URL}/${id}`);
+  return sendRequest(`${BASE_URL}/${id}`);
 }
 
 export async function deleteOne(id) {

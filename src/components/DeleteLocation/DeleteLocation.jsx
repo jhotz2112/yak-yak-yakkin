@@ -1,13 +1,13 @@
 import * as locationsApi from '../../utilities/locations-api';
 
-export default function DeleteLocation({id, setShowDeleteForm, setLocations, locations}) {
+export default function DeleteLocation({ id, setShowDeleteForm, setLocations, locations }) {
 
   async function handleDelete(evt) {
     evt.preventDefault();
     const deleteLocation = await locationsApi.deleteOne(id);
     setShowDeleteForm(false);
     let updatedLocations = locations.filter(l => l._id !== id);
-    setLocations(updatedLocations); 
+    setLocations(updatedLocations);
   }
 
   return (
