@@ -101,6 +101,13 @@ form {
   gap: 1.25vmin;
   color: var(--text-dark);
 }
+.form {
+  background-color: #e3dfdb;
+  align-items: center;
+  border: .1vmin solid rgb(23, 23, 29);
+  border-radius: .5vmin;
+  color: var(--text-dark);
+}
 
 label {
   font-size: 2vmin;
