@@ -25,12 +25,10 @@ export default function App() {
               <LocationDetail />
             </Route>
             <Route path="/location">
+              <Profile user={user} />
               <Location />
             </Route>
-            <Route path="/profile">
-              <Profile user={user} />
-            </Route>
-            <Redirect to="/locations" />
+            <Redirect to="/location" />
           </Switch>
         </>
         :
