@@ -21,6 +21,7 @@ export default function GoogleMap({ address, className }) {
                     {
                         center: location,
                         zoom: 12,
+                        mapId: "2a654215f91e0f34"
                     }
                     );
                     const marker = new window.google.maps.Marker({

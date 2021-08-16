@@ -61,5 +61,6 @@ p {
 
 .google-map {
   height: 25vh;
-  
+  justify-content: center;
+  border-radius: 10px;
 }

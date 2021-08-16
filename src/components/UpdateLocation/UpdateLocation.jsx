@@ -35,6 +35,8 @@ export default function UpdateLocation({ id, setShowUpdateForm, setLocations, lo
       <form  autoComplete="off" onSubmit={handleUpdate}>
         <label>Location Name</label>
         <input type="text" name="locationName" value={formData.locationName} onChange={handleChange} required />
+        <label>Address</label>
+        <input type="text" name="address" value={formData.address} onChange={handleChange} required />
         <label>Description</label>
         <input type="text" name="description" value={formData.description} onChange={handleChange} required />
         <label>Difficulty</label>
