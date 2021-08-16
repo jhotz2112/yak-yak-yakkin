@@ -34,7 +34,7 @@
       console.log("MyKey", key)
       window.myKey = key
       const scriptEl = document.createElement("script");
-      scriptEl.src = "https://maps.googleapis.com/maps/api/js?key=${key}";
+      scriptEl.src = `https://maps.googleapis.com/maps/api/js?key=${key}`;
       document.body.append(scriptEl)
     })
   </script>
