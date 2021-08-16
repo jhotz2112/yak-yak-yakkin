@@ -22,5 +22,3 @@ export function getOne(id) {
 export async function deleteOne(id) {
   return sendRequest(`${BASE_URL}/${id}`, 'DELETE')
 }
-
-

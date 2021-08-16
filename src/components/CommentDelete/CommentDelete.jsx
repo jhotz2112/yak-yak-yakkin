@@ -9,8 +9,6 @@ export default function CommentDelete({ setThisLocation, commentId }) {
   }
 
   return (
-
-      <button className="Delete" type="submit" autoComplete="off" onClick={handleDelete}>X</button>
-
+    <button className="Delete" type="submit" autoComplete="off" onClick={handleDelete}>X</button>
   )
 }

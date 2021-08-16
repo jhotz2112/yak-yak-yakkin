@@ -6,7 +6,8 @@ module.exports = {
     index,
     detail,
     deleteOne,
-    updateOne
+    updateOne,
+    getKey
 };
 
 async function createLocation(req, res) {
@@ -41,4 +42,8 @@ async function deleteOne(req, res) {
 async function updateOne(req, res) {
     const location = await Location.findOneAndUpdate( {_id: req.params.id}, req.body, {new:true} );
     res.json(location);
+}
+
+function getKey(req, res) {
+    res.json(process.env.MAP_API_KEY);
 }

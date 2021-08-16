@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import GoogleMap from "../../components/GoogleMap/GoogleMap";
 import LocationComments from "../../components/LocationComments/LocationComments";
 import * as locationsApi from "../../utilities/locations-api"
 import "./LocationDetail.css"
@@ -39,6 +40,7 @@ export default function LocationDetail() {
                 </div>
                 <LocationComments setThisLocation={setThisLocation} thisLocation={thisLocation} />
             </div>
+            <GoogleMap className="google-map" address={thisLocation.address} />
         </main>
     )
 }
