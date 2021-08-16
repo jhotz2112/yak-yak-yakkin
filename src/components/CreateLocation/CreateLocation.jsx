@@ -1,6 +1,8 @@
 import { useState, useRef, useEffect } from 'react';
+import { useHistory } from 'react-router-dom';
 import { addLocation } from '../../utilities/locations-api';
 import PhotoCard from '../../components/PhotoCard/PhotoCard';
+import { id } from 'postcss-selector-parser';
 
 const initialFormData = {
   locationName: '',
@@ -12,6 +14,7 @@ const initialFormData = {
 
 export default function CreateLocation({ setShowForm, locations, setLocations }) {
   const [formData, setFormData] = useState(initialFormData);
+  const history = useHistory();
 
   // Use a ref prop on the <input> in the JSX to
   // create a reference to the <input>, i.e.,
@@ -33,9 +36,7 @@ export default function CreateLocation({ setShowForm, locations, setLocations })
     formObj.append('content', formData.content);
     const newLocation = await addLocation(formObj);
     setLocations([newLocation, ...locations]);
-    // Clear the description and file inputs
-    setFormData(initialFormData);
-    fileInputRef.current.value = '';
+    history.push(`/details/${newLocation._id}`)
   }
 
   function handleChange(evt) {
