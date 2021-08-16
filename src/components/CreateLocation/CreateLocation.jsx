@@ -60,7 +60,7 @@ export default function CreateLocation({ setShowForm, locations, setLocations })
           <input type="file" ref={fileInputRef} />
           <input name="content" value={formData.content} onChange={handleChange} placeholder="Photo Title" />
         </section>
-        <button type="submit">Submit</button>
+        <button className="submit-button" type="submit">Submit</button>
       </form>
     </div>
   );

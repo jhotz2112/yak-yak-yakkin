@@ -4,7 +4,7 @@ import "./LocationComments.css"
 
 export default function LocationComments({ setThisLocation, thisLocation }) {
     return (
-        <div>
+        <div className="Comment">
             {
                 thisLocation.comments && thisLocation.comments.map((c) => (
                     <div className="CommentBox">

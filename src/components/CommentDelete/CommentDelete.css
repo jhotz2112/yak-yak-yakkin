@@ -1,13 +1,7 @@
-.DeleteButton {
-  height: 3vmin;
-  width: 3vmin;
-  align-content: center;
-}
-
 .Delete {
-  height: 1vmin;
-  width: 1vmin;
-  align-content: center;
   text-align: center;
-  font-size: small;
+  font-size: large;
+  margin: 0;
+  background-color: rgb(165, 141, 165);
+  color: #252b2a;
 }

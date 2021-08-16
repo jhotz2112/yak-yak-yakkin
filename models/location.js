@@ -20,6 +20,7 @@ const locationSchema = new Schema({
         type: String,
         required: true
     },
+    address: String,
     difficulty: {
         type: String,
         enum: ['Beginner', 'Intermediate', 'Expert'],

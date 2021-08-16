@@ -175,7 +175,7 @@ button:disabled, form:invalid button[type="submit"] {
   background-color: var(--tan-4);
 }
 
-button[type="submit"] {
+.submit-button {
   grid-column: span 2;
   margin: 1vmin 0 0;
 }

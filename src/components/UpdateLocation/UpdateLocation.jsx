@@ -31,7 +31,8 @@ export default function UpdateLocation({ id, setShowUpdateForm, setLocations, lo
 
   return (
     <div className="form-container">
-      <form autoComplete="off" onSubmit={handleUpdate}>
+      <section className="flex-ctr-ctr">
+      <form  autoComplete="off" onSubmit={handleUpdate}>
         <label>Location Name</label>
         <input type="text" name="locationName" value={formData.locationName} onChange={handleChange} required />
         <label>Description</label>
@@ -42,8 +43,9 @@ export default function UpdateLocation({ id, setShowUpdateForm, setLocations, lo
           <option value='Intermediate'>Intermediate</option>
           <option value='Expert'>Expert</option>
         </select>
-        <button type="submit">Submit</button>
+        <button className="submit-button" type="submit">Submit</button>
       </form>
+      </section>
     </div>
   );
 }

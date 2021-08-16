@@ -1,7 +1,16 @@
 .CommentBox {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
     background-color: thistle;
     width: 30vw;
     border: .1vmin solid rgb(23, 23, 29);
     border-radius: .5vmin;
-    gap: 1vmin;
+}
+
+.Comment {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 10%;
 }
