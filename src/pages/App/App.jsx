@@ -30,7 +30,7 @@ export default function App() {
             <Route path="/profile">
               <Profile user={user} />
             </Route>
-            <Redirect to="/profile" />
+            <Redirect to="/locations" />
           </Switch>
         </>
         :

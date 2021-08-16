@@ -10,8 +10,7 @@ export default function NavBar(props) {
 
   return (
     <nav>
-      <Link to="/profile">Profile</Link>
-      &nbsp; | &nbsp;
+      {/* <Link to="/profile">Profile</Link> */}
       <Link to="/aboutpage">About</Link>
       &nbsp; | &nbsp;
       <Link to="/location">Locations</Link>
