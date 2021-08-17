@@ -35,7 +35,7 @@ LOCATION
 ---
 
 ## Getting Started!
-
+View Locations around the globe to enjoy the Outdoors! Get started by clicking on a location. If you have a Location you'd like to add, simply click create location and fill out the info provided to add it! Spelled something wrong? Update any location you've uploaded by clicking update. Leave comments on places you've visted or would like to!
 
 ---
 
