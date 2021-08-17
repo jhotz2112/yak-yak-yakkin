@@ -11,7 +11,7 @@ ABOUT
 ![ABOUT](https://i.imgur.com/Fb5hbQo.png)
 
 LOCATIONS
-![ALL LOCATIONS][Imgur](https://i.imgur.com/6zSNIuD.png)
+![ALL LOCATIONS](https://i.imgur.com/6zSNIuD.png)
 
 LOCATION
 ![NEW LOCATION](https://i.imgur.com/MtBRKvL.png)
