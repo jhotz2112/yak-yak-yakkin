@@ -21,7 +21,7 @@ export default function GoogleMap({ address, className }) {
                         mapId: "2a654215f91e0f34"
                     }
                     );
-                    const marker = new window.google.maps.Marker({
+                    new window.google.maps.Marker({
                         position: location,
                         map: map,
                     });

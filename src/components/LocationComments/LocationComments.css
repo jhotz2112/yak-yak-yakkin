@@ -6,6 +6,7 @@
     width: 30vw;
     border: .1vmin solid rgb(23, 23, 29);
     border-radius: .5vmin;
+    margin: 1.5px;
 }
 
 .Comment {

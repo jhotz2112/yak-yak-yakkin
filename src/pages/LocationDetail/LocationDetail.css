@@ -60,7 +60,8 @@ p {
 }
 
 .google-map {
-  height: 25vh;
+  height: 35vh;
   justify-content: center;
   border-radius: 10px;
+  border: 3vmin solid #c7e1e8;
 }

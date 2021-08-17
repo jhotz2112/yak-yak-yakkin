@@ -7,13 +7,13 @@ export default function LocationComments({ setThisLocation, thisLocation, idx })
         <div className="Comment">
             {
                 thisLocation.comments && thisLocation.comments.map((c) => (
-                    <div className="CommentBox">
+                    <div className="CommentBox" key={c._id}>
                         <p>{c.content}</p>
-                        <CommentDelete commentId={c._id} setThisLocation={setThisLocation} thisLocation={thisLocation} key={idx} />
+                        <CommentDelete commentId={c._id} setThisLocation={setThisLocation} thisLocation={thisLocation} />
                     </div>
                 ))
             }
-            <CommentCreate setThisLocation={setThisLocation} thisLocation={thisLocation} key={idx} />
+            <CommentCreate setThisLocation={setThisLocation} thisLocation={thisLocation} />
         </div>
     )
 }

@@ -33,7 +33,9 @@ export default function LocationDetail({idx}) {
                         <br></br>
                         <br></br>
                         <p>
-                            <p><u>Difficulty:</u></p>
+                            <u>Difficulty:</u>
+                            <br></br>
+                            <br></br>
                             {thisLocation.difficulty}
                         </p>
                     </div>

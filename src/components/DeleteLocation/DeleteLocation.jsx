@@ -4,7 +4,7 @@ export default function DeleteLocation({ id, setShowDeleteForm, setLocations, lo
 
   async function handleDelete(evt) {
     evt.preventDefault();
-    const deleteLocation = await locationsApi.deleteOne(id);
+    await locationsApi.deleteOne(id);
     setShowDeleteForm(false);
     let updatedLocations = locations.filter(l => l._id !== id);
     setLocations(updatedLocations);
