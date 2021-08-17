@@ -18,7 +18,6 @@ export default function Location() {
         async function getLocations() {
             const locations = await locationsApi.getAll();
             setLocations(locations);
-            console.log(locations);
         }
         getLocations();
     }, []);

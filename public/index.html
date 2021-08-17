@@ -31,7 +31,6 @@
     fetch("/api/locations/key")
     .then(res => res.json())
     .then(key => {
-      console.log("MyKey", key)
       window.myKey = key
       const scriptEl = document.createElement("script");
       scriptEl.src = `https://maps.googleapis.com/maps/api/js?key=${key}`;

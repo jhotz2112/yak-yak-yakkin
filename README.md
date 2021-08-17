@@ -7,14 +7,14 @@ The goal of this page is for Outdoors enthusiasts, of any skill level, to share 
 
 --- 
 
-HOMEPAGE
-![HOMEPAGE](https://i.imgur.com/1uoJbf9.png)
+ABOUT
+![ABOUT](https://imgur.com/Fb5hbQo)
 
-ALL LAKES/RIVERS
-![ALL LAKES/RIVERS](https://i.imgur.com/keqQuXA.png)
+Locations
+![ALL LOCATIONS](https://imgur.com/6zSNIuD)
 
-ADD LAKES/RIVERS
-![ADD](https://i.imgur.com/6zYZhtP.png)
+Location
+![NEW LOCATION](https://imgur.com/MtBRKvL)
 
 ---
 

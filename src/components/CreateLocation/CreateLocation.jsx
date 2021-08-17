@@ -1,8 +1,6 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef } from 'react';
 import { useHistory } from 'react-router-dom';
 import { addLocation } from '../../utilities/locations-api';
-import PhotoCard from '../../components/PhotoCard/PhotoCard';
-import { id } from 'postcss-selector-parser';
 
 const initialFormData = {
   locationName: '',

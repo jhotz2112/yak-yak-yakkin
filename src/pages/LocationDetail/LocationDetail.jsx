@@ -5,7 +5,7 @@ import LocationComments from "../../components/LocationComments/LocationComments
 import * as locationsApi from "../../utilities/locations-api"
 import "./LocationDetail.css"
 
-export default function LocationDetail() {
+export default function LocationDetail({idx}) {
     let { id } = useParams();
     const [thisLocation, setThisLocation] = useState({})
 
@@ -15,13 +15,13 @@ export default function LocationDetail() {
             setThisLocation(location);
         }
         getLocal();
-    }, []);
+    }, [id]);
 
     return (
         <main>
             <div className="LocationContainer">
                 <div>
-                    <img src={thisLocation.photos && thisLocation.photos[0].url} className="DetailsPic"></img>
+                    <img src={thisLocation.photos && thisLocation.photos[0].url} className="DetailsPic" alt=""></img>
                 </div>
                 <div className="LocationDetail">
                     <div className="LocationDetailName">
@@ -38,9 +38,9 @@ export default function LocationDetail() {
                         </p>
                     </div>
                 </div>
-                <LocationComments setThisLocation={setThisLocation} thisLocation={thisLocation} />
+                <LocationComments setThisLocation={setThisLocation} thisLocation={thisLocation} key={idx} />
             </div>
-            <GoogleMap className="google-map" address={thisLocation.address} />
+            <GoogleMap className="google-map" address={thisLocation.address} key={idx} />
         </main>
     )
 }
