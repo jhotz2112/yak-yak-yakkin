@@ -8,13 +8,13 @@ The goal of this page is for Outdoors enthusiasts, of any skill level, to share 
 --- 
 
 ABOUT
-![ABOUT](https://imgur.com/Fb5hbQo)
+![ABOUT](https://i.imgur.com/Fb5hbQo.png)
 
-Locations
-![ALL LOCATIONS](https://imgur.com/6zSNIuD)
+LOCATIONS
+![ALL LOCATIONS][Imgur](https://i.imgur.com/6zSNIuD.png)
 
-Location
-![NEW LOCATION](https://imgur.com/MtBRKvL)
+LOCATION
+![NEW LOCATION](https://i.imgur.com/MtBRKvL.png)
 
 ---
 
