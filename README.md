@@ -1,4 +1,4 @@
-## Colorado Lakes and Rivers!
+## Yakkin on Location!
 Have you ever wanted to go kayaking, hiking, boating, tubing or just hangout in a gorgeous place and had no idea where to go?
 
 Well you've come to the right place.
